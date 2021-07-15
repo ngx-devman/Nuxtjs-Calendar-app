@@ -1,0 +1,49 @@
+{
+	"name": "clublisi-frontend",
+	"version": "0.7.9",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
+		"lint": "yarn lint:js",
+		"script:update": "./.github/scripts/update.sh",
+		"script:build": "./.github/scripts/build.sh",
+		"script:deploy": "./.github/scripts/screen-deploy.sh"
+	},
+	"dependencies": {
+		"@nuxtjs/axios": "^5.12.5",
+		"@nuxtjs/moment": "^1.6.1",
+		"@nuxtjs/pwa": "^3.3.5",
+		"@types/lodash": "^4.14.168",
+		"core-js": "^3.8.3",
+		"lodash": "^4.17.21",
+		"logrocket": "^1.1.0",
+		"moment-timezone": "^0.5.33",
+		"nuxt": "^2.14.12",
+		"nuxt-property-decorator": "^2.9.1"
+	},
+	"devDependencies": {
+		"@nuxt/types": "^2.14.12",
+		"@nuxt/typescript-build": "^2.0.4",
+		"@nuxtjs/eslint-config-typescript": "^5.0.0",
+		"@nuxtjs/eslint-module": "^3.0.2",
+		"@types/axios": "^0.14.0",
+		"@types/debug": "^4.1.5",
+		"@types/lodash": "^4.14.168",
+		"@types/moment": "^2.13.0",
+		"@types/moment-timezone": "^0.5.30",
+		"@types/workbox-sw": "^4.3.1",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.18.0",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-nuxt": "^2.0.0",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-vue": "^7.5.0",
+		"fibers": "^5.0.0",
+		"prettier": "^2.2.1",
+		"sass": "^1.32.8"
+	}
+}

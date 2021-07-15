@@ -1,0 +1,39 @@
+@import 'details';
+
+.form-button {
+	text-transform: capitalize;
+}
+
+.form-button.outline {
+	color: $that-gray;
+}
+
+.filter-btn {
+	background: transparent;
+}
+
+.favorite-item {
+	.fas.fa-star {
+		color: #ebca9e;
+	}
+}
+
+.form-input,
+.form-select,
+.form-radio-buttons {
+	.input-label {
+		.input-required-mark {
+			color: inherit;
+			font-weight: bolder;
+			font-size: 1.25em;
+			margin-left: 0.25em;
+			--fa-primary-color: #{$that-peach-darker};
+			--fa-secondary-color: white;
+		}
+	}
+}
+
+:root {
+	--fa-primary-color: #{$color-primary};
+	--fa-secondary-color: #{$color-secondary};
+}

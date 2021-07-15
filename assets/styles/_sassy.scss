@@ -1,0 +1,120 @@
+@import 'theme';
+@import 'mixins';
+@import 'reset';
+@import 'client-theme';
+
+@mixin flex($d: row, $j: flex-start, $a: flex-start) {
+	display: flex;
+	flex-direction: $d;
+	justify-content: $j;
+	align-items: $a;
+}
+
+@mixin grid($columns: auto, $rows: auto, $areas: none) {
+	display: grid;
+	grid-template-columns: $columns;
+	grid-template-rows: $rows;
+	grid-template-areas: $areas;
+}
+
+@mixin glass-it($color: rgba($color-primary, 0.63), $blur: 4px) {
+	background: $color;
+	backdrop-filter: blur($blur);
+	-webkit-backdrop-filter: blur($blur);
+}
+
+@mixin fancy-scrollbar {
+	&.hide-scrollbar {
+		&::-webkit-scrollbar-thumb {
+			background-color: $scrollbar-track-background-var;
+			border: 0px solid $scrollbar-track-background-var;
+			border-radius: 50px;
+			filter: none;
+			transition: background-color 0.25s, filter 0.25s;
+		}
+
+		&:hover {
+			&::-webkit-scrollbar-thumb {
+				background-color: $scrollbar-thumb-background-var;
+				transition: background-color 0.25s, filter 0.25s;
+			}
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: $scrollbar-size-var;
+		height: $scrollbar-size-var;
+	}
+
+	&::-webkit-scrollbar-button {
+		width: $scrollbar-button-size-var;
+		height: $scrollbar-button-size-var;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-thumb-background-var;
+		border: 0px solid $scrollbar-track-background-var;
+		border-radius: 50px;
+		filter: none;
+		transition: background-color 0.25s, filter 0.25s;
+	}
+	&::-webkit-scrollbar-thumb:active {
+		filter: brightness(80%);
+	}
+	&::-webkit-scrollbar-track {
+		background: $scrollbar-track-background-var;
+		border: 0px none $scrollbar-track-background-var;
+		border-radius: 50px;
+	}
+	&::-webkit-scrollbar-track:hover {
+		background: $scrollbar-track-background-var;
+	}
+	&::-webkit-scrollbar-track:active {
+		background: $scrollbar-track-background-var;
+	}
+
+	&::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+}
+
+@mixin horizontal-list-item($spacing: 0.5em) {
+	margin-left: $spacing;
+	margin-right: $spacing;
+
+	&:first-of-type {
+		margin-left: 0px;
+
+		&:last-of-type {
+			margin-right: 0px;
+		}
+	}
+
+	&:last-of-type {
+		margin-right: 0px;
+
+		&:first-of-type {
+			margin-left: 0px;
+		}
+	}
+}
+
+@mixin vertical-list-item($spacing: 0.5em) {
+	margin-top: $spacing;
+	margin-bottom: $spacing;
+
+	&:first-of-type {
+		margin-top: 0px;
+
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+
+	&:last-of-type {
+		margin-bottom: 0px;
+
+		&:first-of-type {
+			margin-top: 0px;
+		}
+	}
+}

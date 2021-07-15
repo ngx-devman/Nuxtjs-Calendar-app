@@ -1,0 +1,151 @@
+@import 'sassy';
+@import 'layout';
+@import 'forms';
+
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800;900&display=swap');
+
+:root {
+	--border-radius: #{$border-radius};
+}
+
+* {
+	box-sizing: border-box;
+	@include fancy-scrollbar;
+}
+
+html,
+body,
+#app {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+
+	margin: 0px;
+
+	background-color: $color-page-background-var;
+	color: $color-text-var;
+
+	font-family: $font-body-var;
+	font-size: $font-size-var;
+
+	overflow: hidden;
+
+	transition: width 1s, height 1s;
+}
+
+#__nuxt,
+#__layout {
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	font-family: $font-header-var;
+	font-weight: $font-header-weight-var;
+}
+
+p {
+	margin: 0px;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+span {
+	font-family: $font-body-var;
+	font-size: 1em;
+}
+
+.glass {
+	@include glass-it;
+}
+
+.fancy-scrollbar {
+	@include fancy-scrollbar;
+}
+
+.panel-body-btn {
+	background-color: $color-primary;
+	padding: 0px 10px 10px 10px;
+	text-align: center;
+
+	.filter-btn {
+		padding: 0.5em;
+	}
+}
+
+.layout-enter-active,
+.layout-leave-active {
+	opacity: 1;
+	transition: opacity 0.25s;
+
+	&.layout-leave-active {
+		opacity: 0;
+	}
+
+	&.layout-enter {
+		opacity: 0;
+	}
+
+	&.layout-leave {
+		opacity: 1;
+	}
+}
+
+// .page-enter-active,
+// .page-leave-active {
+// 	transition: opacity 0.25s;
+// }
+
+// .page-enter-active {
+// 	opacity: 1;
+
+// 	&.page-enter {
+// 		opacity: 0;
+// 	}
+// }
+
+// .page-leave-active {
+// 	opacity: 0;
+
+// 	&.page-leave {
+// 		opacity: 1;
+// 	}
+// }
+
+.page-enter-active {
+	position: relative;
+	top: 100%;
+	transition: top 0.25s;
+
+	&.page-enter-to {
+		top: 0px;
+	}
+}
+
+.page-leave-active {
+	position: relative;
+	top: 0%;
+	transition: top 0.25s;
+
+	&.page-leave-to {
+		top: 100%;
+	}
+}
+
+@import 'common';

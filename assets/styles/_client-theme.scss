@@ -1,0 +1,19 @@
+$that-gray: #646464;
+$that-gray-lighter: lighten($that-gray, 20%);
+$that-gray-darker: darken($that-gray, 20%);
+
+$that-peach: #ebb09e;
+$that-white: #ffffff;
+$that-peach-darker: darken($that-peach, 20%);
+$that-peach-lighter: lighten($that-peach, 20%);
+
+$that-green: #81c784;
+$that-green-darker: darken($that-green, 20%);
+
+$that-yellow: #ebca9e;
+$that-yellow-var: var(--that-yellow, $that-yellow);
+
+$that-green-success: #c5d0a6;
+
+$color-alert: $that-peach-darker;
+$color-success: $that-green-darker;

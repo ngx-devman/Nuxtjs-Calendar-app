@@ -1,0 +1,14 @@
+$sorts-font: 'Sorts Mill Goudy', serif;
+$lato-font: 'Lato', sans-serif;
+
+$font-size: medium;
+$font-size-var: var(--font-size, $font-size);
+
+$font-header: $sorts-font;
+$font-header-var: var(--font-header, $font-header);
+
+$font-header-weight: 400;
+$font-header-weight-var: var(--font-header-weight, $font-header-weight);
+
+$font-body: $lato-font;
+$font-body-var: var(--font-body, $font-body);

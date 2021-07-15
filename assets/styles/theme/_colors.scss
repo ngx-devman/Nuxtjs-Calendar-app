@@ -1,0 +1,80 @@
+$color-primary: #7b98ac;
+$color-primary-var: var(--color-primary, $color-primary);
+
+$color-primary-darken: darken(#7b98ac, 25%);
+$color-primary-darken-var: var(--color-primary-darken, $color-primary-darken);
+
+$color-primary-lighten: lighten($color-primary, 25%);
+$color-primary-lighten-var: var(
+	--color-primary-lighten-var,
+	$color-primary-lighten
+);
+$color-selectbox-text: #646464;
+$color-primary-text: white;
+$color-primary-text-var: var(--color-primary-text, $color-primary-text);
+
+$color-secondary: white;
+$color-secondary-var: var(--color-secondary, $color-secondary);
+
+$color-alert: red;
+$color-alert-text: white;
+
+$color-success: green;
+$color-success-text: white;
+
+$color-info: blue;
+$color-info-text: white;
+
+$color-warning: orange;
+$color-warning-text: white;
+
+$color-page-background: rgb(255, 255, 255);
+$color-page-background-var: var(
+	--color-page-background,
+	$color-page-background
+);
+
+$color-text: rgb(255, 255, 255);
+$color-text-var: var(--color-text, $color-text);
+
+$color-header: rgb(255, 255, 255);
+$color-header-var: var(--color-header, $color-header);
+
+$color-input-background: white;
+$color-input-background-var: var(
+	--color-input-background,
+	$color-input-background
+);
+
+$color-input-label-text: #212121;
+$color-input-label-text-var: var(
+	--color-input-label-text,
+	$color-input-label-text
+);
+
+$color-input-area-background: #f5f5f5;
+$color-input-area-background-var: var(
+	--color-input-area-background,
+	$color-input-area-background
+);
+
+$color-switch-background: #e5e2e2;
+$color-switch-background-var: var(
+	--color-switch-background,
+	$color-switch-background
+);
+
+$color-switch-bit: white;
+$color-switch-bit-var: var(--color-switch-bit, $color-switch-bit);
+
+$color-switch-active-background: $color-primary;
+$color-switch-active-background-var: var(
+	--color-switch-active-background,
+	$color-switch-active-background
+);
+
+$color-switch-active-bit: white;
+$color-switch-active-bit-var: var(
+	--color-switch-active-bit,
+	$color-switch-active-bit
+);

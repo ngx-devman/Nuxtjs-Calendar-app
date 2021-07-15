@@ -1,0 +1,27 @@
+name: deploy application
+on:
+  workflow_dispatch:
+    inputs:
+      host:
+        description: "Host to deploy too."
+        required: true
+      username:
+        description: "Username to connect to the server with."
+        required: true
+        default: "clublisi"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: connect and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ github.event.inputs.host }}
+          username: ${{ github.event.inputs.username }}
+          key: ${{ secrets.CI_KEY }}
+          port: 22
+          script: |
+            cd ~/nuxtjs-frontend
+            yarn script:update
+            yarn script:build
+            yarn script:deploy
